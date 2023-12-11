@@ -42,9 +42,10 @@ https://dotnet.microsoft.com/download/thank-you/net461-offline
 
 ### 更新
 * [v2.1.1.151]
-  + 加入全局右键菜单，默认快捷键为Alt+Esc，建议在窗口化模式下使用
+  + 加入全局右键菜单，快捷键为Alt+Esc，建议在魔兽窗口化运行模式下使用
   + 加入快捷施法兼容双击动作的选项，适用于dota背包在自身上使用的情况
   + 高级改键加入魔兽版本、地图路径、运行参数的自定义过滤功能
+  + 高级改键加入启动扩展程序的时机选择功能
   + 加入按键长按时只触发一次脚本的选项
   + 优化中文喊话的使用体验，降低聊天输入框的闪烁效果
   + 判断技能面板是否存在Esc由原来的100ms降为50ms
@@ -54,8 +55,8 @@ https://dotnet.microsoft.com/download/thank-you/net461-offline
   + 扩展脚本加入按名称杀死指定进程的功能
   + 调用脚本dll注入时判断已注入则跳过，但可重复调用无参数的函数
   + 背包添加左键+Esc的功能修改为“添加左键+锁定单位”，防止选中单位丢失
-  + 高级改键添追加时支持设置单位锁定，扣在左键上添加可防止选中单位丢失
-  + 高级改键添加可通过快捷键切换另一个脚本的开启状态功能
+  + 高级改键添追加时支持设置单位锁定，在左键上添加可防止选中单位丢失
+  + 高级改键添加可通过快捷键改变另一个脚本的开启状态的功能
   + 高级改键支持添加XButton触发
   + 优化了窗口鼠标锁定功能、全屏锁鼠标支持多屏的情况
   + 优化了喊话功能，针对纯英文字符喊话特殊处理
@@ -169,5 +170,5 @@ https://dotnet.microsoft.com/download/thank-you/net461-offline
 ### 赞赏
 <details>
 <summary>如果觉得本程序对你有帮助可以在程序的赞赏入口里对我进行赞赏(金额随意)</summary>
-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
+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
 </details>
