@@ -18,7 +18,7 @@
 
 <div class="title">魔兽争霸3改键SuWar3Tools</div>
 
-> 一个强大的魔兽争霸改键工具
+> 一款强大的魔兽争霸改键工具
 
 <p align="center">
     <a target="_blank" href=''>
