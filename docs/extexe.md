@@ -11,7 +11,7 @@
 * 扩展程序开发指引： [Others/SuWar3ToolsExtDemo/README.md](https://github.com/war3tools/war3tools.github.io/blob/master/Others/SuWar3ToolsExtDemo/README.md)
 
 ### 其它开发
-* 任何你熟悉的最终可以生成Windows控制台应用程序的语言都可以
+* 任何你熟悉的最终可以生成Windows控制台应用程序的语言都可以，为啥用控制台制序，因为它没有界面故不会在运行后抢魔兽窗口的焦点
 * SuWar3Tools在调用外部程序之前会先将参数放到文件“[运行文件名]_ing.json”里，这里的“[运行文件名]”为外部程序文件名
 * 首先在程序启动后先读取运行目录下“[运行文件名]_ing.json”来得到参数，参数获取之后删除“[运行文件名]_ing.json”
 * ExtInputArgs为输入的参数，ExtOutputArgs为要传回的参数，具体参数结构内容请看[ExtArgs.cs](SuWar3ToolsExt/ExtArgs.cs)文件，参数为json格式：  
@@ -23,4 +23,4 @@
 ```
 {"MType":0,"Msg":"这儿是你要显示到聊天对话框里的消息"}
 ```
-* 生成exe程序后复制到”SuWar3Tools/SuWar3ToolsExt”目录下，在高级改键里通过“右键->脚本->添加控制台程序->选择扩展程序”进行使用
+* 生成exe程序后复制到”SuWar3Tools/SuWar3ToolsExt”目录下，在高级改键里通过“右键->脚本->运行扩展程序->选择扩展程序”进行使用

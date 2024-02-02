@@ -23,6 +23,7 @@
   + 将鼠标放到第1格正中心后按下 Ctrl+Alt+<
   + 将鼠标放到第12格正中心后按下 Ctrl+Alt+>
   + 设置完成，配置信息自动缓存，如有问题可重设
+* 显蓝：借助第三方工具实现显蓝功能
 * 高级改键：点击一改多区域右边的无穷符号即可进入高级改键设置  
 高级改键参考示例： [Others/AdvancedCodeDemo/README.md](https://github.com/war3tools/war3tools.github.io/blob/master/Others/AdvancedCodeDemo/README.md)
 * 调用外部扩展程序：可调用第三方控制台程序并根据参数将消息以聊天形式发送  

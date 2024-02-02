@@ -4,7 +4,7 @@
 * Github： https://github.com/war3tools/war3tools.github.io
 
 ### 使用方法
-在SuWar3Tools里改键设置里右键->脚本->添加外部控制台程序，然后将09.exe复制到“SuWar3Tools\SuWar3ToolsExt”目录里，选择09.exe程序后会提示输入参数，可以填“1”、“2”或“21”，如果不填则默认为“1”，三个参数说明为“1:Dota  2:IM觉醒 21:OMG“，不填参数添加后的示例为：  
+在SuWar3Tools里改键设置里右键->脚本->运行扩展程序，然后将09.exe复制到“SuWar3Tools\SuWar3ToolsExt”目录里，选择09.exe程序后会提示输入参数，可以填“1”、“2”或“21”，如果不填则默认为“1”，三个参数说明为“1:Dota  2:IM觉醒 21:OMG“，不填参数添加后的示例为：  
 LAlt+F = <09.exe>  
 添加参数为2的示例为：    
 LAlt+F = <09.exe|2>  

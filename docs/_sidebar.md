@@ -15,6 +15,8 @@
   - [高级](/advance "魔兽争霸3改键SuWar3Tools - 高级")
 - 全局设置
   - [全局设置](/global "魔兽争霸3改键SuWar3Tools - 全局设置")
+- 插件
+  - [插件](/plugin "魔兽争霸3改键SuWar3Tools - 插件")
 - 窗口化
   - [窗口化](/window "魔兽争霸3改键SuWar3Tools - 窗口化")
 - 其它

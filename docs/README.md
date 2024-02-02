@@ -22,6 +22,7 @@
   + 将鼠标放到第1格正中心后按下 Ctrl+Alt+<
   + 将鼠标放到第12格正中心后按下 Ctrl+Alt+>
   + 设置完成，配置信息自动缓存，如有问题可重设
+* 显蓝：借助第三方工具实现显蓝功能
 * 高级改键：点击一改多区域右边的无穷符号即可进入高级改键设置  
 高级改键参考示例： [Others/AdvancedCodeDemo/README.md](https://github.com/war3tools/war3tools.github.io/blob/master/Others/AdvancedCodeDemo/README.md)
 * 调用外部扩展程序：可调用第三方控制台程序并根据参数将消息以聊天形式发送  
@@ -43,6 +44,11 @@ https://dotnet.microsoft.com/download/thank-you/net461-offline
 
 ### 更新
 * [v2.1.1.152]
+  + 添加插件功能，引入第三方显蓝功能，需要自行勾选，请特别注意平台限制
+  + 建主自动聊天消息支持换行发送多条消息
+  + 尝试优化了快捷施法锁定英雄的速度，可能感觉并不明显
+  + 脚本增加了直接打开运行命令或卸载Dll的功能
+  + 特定时间运行增加了检测魔兽退出时可执行相关脚本的功能
   + 记住窗口化设置添加延时，避免魔兽全屏运行时记录的值不正确
   + 修复技能面板自定义按键映射处理逻辑问题
   + 其它小优化
@@ -175,7 +181,7 @@ https://dotnet.microsoft.com/download/thank-you/net461-offline
   + 加入更新提示框显示更新日志的功能
   + 加入鼠标模拟技能时可锁定鼠标位置
 <details>
-Xv3oHAFFhxzB1hSqiU5CRWFiMn3xIrn+g7cYWPz15nrGA5toiQNtFuLmvx8vUqcXTy0gU8ejaL5K7BRbZo5fwY0R7+2Nod4XC/yQzcuRJxJsskbb4HSQudt6UVUO/bZYJ1Cg3bKNqQZxGBsF3H5aR9EE37+DGZDxDhRRurTHNvl2B99DZJv0ezzh+exOSXQswLv+25tMRNwoDeBOVFkACslC/JCabMSfPVfc4mTjoZekSes8Kd68OrhJf5t52KCzRgh+u0BkxZt5guRBWc0alt9mFvx+wl4NfXuUNWz6l8D+b7gOHL/uJWREheXk3E6t0b2SEuzrCebeL3mce2wW+5rv1FQ/WY9wOhwJIhtSFyUoV/Sz7ozbO5Pn23+A50mMR4mcQtFtK+hpzmq1rHIK5xwtH4xRApOQIJKE066wqEeKhQ+Tf3OwHR+cKqm93E8l/VzNBOlLjfxREOtt1hwulNosuvagOqZEsCrUoZS1c9y9Z/+axT9WbuSwyzvellnCNZPvLupDAdSqgsqjImsM/ocJxLXy1JxbyDMU0H0vRgdcZ0mDQPjnuaP+wxNovur+awxpD/LX+XikjXHMq75YnloyAwBPOoCxGlJ+FzCWvg7JEfNmMC9bcPbOEnng/xB8mToUTW9RRrCYiJxL20XzPUaWH0jwqi3D/291HLe43kLOPEkKUEAuYHO/k1UZ10wBxGgeZHNlE1/Nf8v59qaPRe210g0xAeXa7WxhHX3UJY5fA1cis5c7KLiFB+YNy1H5IPjdpiril6FWnlb8eXsn+YKAUmwnQGNirTwl0hLaSrLPv8w4g7Iu1DQVOMQMtqAPzLMt8xB7k9tK6BH8CxKABlKgdSvSUhQZWyg2IA2+zBxFOetl4QyHVB3OxTfVXoAVLwUhyecT+zR/eaniYRlNNpLFobnybe+aO32meEweFmE=
+17fm5QPG8D8Z7BDZOvTn6sLLih8mS294ubbG1BCEX0qH95MpVZ5Z1Mkv9+phw/G0k4bylf7KzAByt5oUE88NqzZIhM1P3BV+aWFxoapRYSr/iQxLvsPOkicYAORKpangPFaXGnK1Wh1axARrsiHshG3MUQqfuwTNTvNlDtf9zxILfI1PJs0mnp4IsnvVprqJYDXNwabMRT+CPASz7CuCuMJK2IBmpsHvWrINszKqCEn2e9H5qPdknQnD23Dq8dCWHsfzOON9851xFh/Lq+BZS00uwxNcc2ag8MMgyaWAGsEOYFha6QblzmsbR+AQuirsMj6i8jAyXAsYeVoy/oOoCOY9LsUDj9dG4UXjJAM46ox4wEdWjdkHYziIcWi3Yutz42z4VcmKWoCGg1k2xP3LAIhl/hOkRUqsTT4qdZ8CwIdl/87zjf8ib4fbk3vIqnaPM1Pj7sexk3tDsaD5ImyPLtPN3ZHiP1E2e3vhtyog2t57uw5Cu3fbiHUeig31vgDMjRLCfagMgrjOoBSGnFFPtr3inH5ucxZLDrI2WjUiF2slvg0/niJVemZeojOjk1rZtZRDcWTjoXeK4tWzqk3K9y09BWoCa0JPuYvPpukaoZ4iJyOC4mYiLKVv/5J8M3Au3BDds8AtnuXyITs+VJn90xDl52BWlzpmhiber+IKKjTui6PT3J4oeRFpMZ0d+eBOZoB26C1XzgFsG/+H8JrSuMNjxjufZLcbDXdu4Z0LaNruQW4CZf2DX3ohldO/6bvHBqOll7aYqqQZLJgTmcx14B3uq2mC8p6onVUYoHlY13oQuKZ5SjEkOFN7pQCmFk+bOqPPrFm0AqGy/z3iXfvK5cZY9UhGe6CrUaP98Jd9z5N9cSCzns4Qe8DHz+gczaIQ/R7paqqRxHQbvCG0gvQ6NeX6U9skgSV2jOdQVCXTs6Q=
 </details>
 
 ### 赞赏
