@@ -21,9 +21,7 @@
 > 永久访问地址： https://war3tools.github.io
 
 <p align="center">
-    <a target="_blank" href=''>
-        <img src="https://visitor-badge.laobi.icu/badge?page_id=war3tools.github.io"/>
-    </a>
+  <img src="https://visitor-badge.laobi.icu/badge?page_id=war3tools.github.io"/>
 </p>
 
 <p align="center">
