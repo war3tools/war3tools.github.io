@@ -36,7 +36,7 @@
 * **`本程序仅供学习交流，严禁用于商业用途，请于24小时内删除，作者不对因使用本软件而产生的后果和损失承担任何责任`**
 
 ### 下载
-* 地址 https://sourceforge.net/projects/war3tools/files/
+* 地址 https://e.pcloud.link/publink/show?code=kZuPfnZPMNuop5GahSHaMcaSxbojp7AXIFX
 * 如果运行失败，请下载并安装.net 4.6.1 微软官方离线安装包：  
 https://dotnet.microsoft.com/download/thank-you/net461-offline
 * Bug反馈和意见及建议邮箱： war3tools@outlook.com  
@@ -66,7 +66,6 @@ https://dotnet.microsoft.com/download/thank-you/net461-offline
   + 修复切换方案信息不提示和小图标功能不显示的问题
   + 其它小优化
 * [v2.1.1.150]
-  + 界面优化调整，更新下载通道加入Sourceforge
   + 扩展脚本加入按名称杀死指定进程的功能
   + 调用脚本dll注入时判断已注入则跳过，但可重复调用无参数的函数
   + 背包添加左键+Esc的功能修改为“添加左键+锁定单位”，防止选中单位丢失
