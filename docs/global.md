@@ -32,3 +32,34 @@
 * 强制改键于未支持的魔兽：建议当魔兽是第三方修改过的魔兽版本或是最新版且改键失效时启用
 * 采用第二方案调整视野：另一个拉高视野和降低视野的方式，默认不选，当出现问题时可尝试勾选看看效果
 * 按键长按时只触发一次：本程序默认情况下当长按键时会循环触发改键，启用此选项后只会触发一次，用户需要再触发改键则需要再次按下
+
+### Http服务扩展
+* 勾选此选项时自动设置地址为：http://127.0.0.1:43210/
+* 此功能为对外开放服务，目前添加了第三方程序通过调用http地址来进行聊天消息框的显示
+  + 调用地址：http://127.0.0.1:43210/showmsg
+  + 调用方式：POST
+  + 调用参数：Json格式，具体参数内容请看[ExtArgs.cs](https://github.com/war3tools/war3tools.github.io/blob/master/Others/SuWar3ToolsExtDemo/SuWar3ToolsExt/ExtArgs.cs)文件
+```
+{
+    "MType":0,
+    "Msg":"发送给盟友的消息\n支持多行"
+}
+```
+```
+{
+    "MType":1,
+    "Msg":"发送给所有人的消息\n支持多行"
+}
+```
+```
+{
+    "MType":2,
+    "Msg":"打开聊天框显示的信息，不会发送，只支持单行"
+}
+```
+```
+{
+    "MType":3,
+    "Msg":"[SendKeys]{Enter}\n[SetClipboard]复杂模式的消息，具体用法请参考ExtArgs说明\n[SendKeys]^v\n[SendKeys]{Enter}"
+}
+```

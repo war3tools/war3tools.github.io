@@ -7,7 +7,7 @@
 ### VS开发
 * Win7+  ->  Visual studio 2019+  ->  Windows控制台应用程序
 * 直接下载此Demo源码，并在ExtLogic.cs的ProcessLogic方法里补充你的逻辑后生成Exe即可使用
-* ExtInputArgs为输入的参数，ExtOutputArgs为要传回的参数，具体参数内容请看[ExtArgs.cs](SuWar3ToolsExt/ExtArgs.cs)文件
+* ExtInputArgs为输入的参数，ExtOutputArgs为要传回的参数，具体参数内容请看[ExtArgs.cs](https://github.com/war3tools/war3tools.github.io/blob/master/Others/SuWar3ToolsExtDemo/SuWar3ToolsExt/ExtArgs.cs)文件
 * 扩展程序开发指引： [Others/SuWar3ToolsExtDemo/README.md](https://github.com/war3tools/war3tools.github.io/blob/master/Others/SuWar3ToolsExtDemo/README.md)
 
 ### 其它开发
