@@ -34,9 +34,10 @@
 * 按键长按时只触发一次：本程序默认情况下当长按键时会循环触发改键，启用此选项后只会触发一次，用户需要再触发改键则需要再次按下
 
 ### Http服务扩展
-* 勾选此选项时自动设置地址为：http://127.0.0.1:43210/
-* 此功能为对外开放服务，目前添加了第三方程序通过调用http地址来进行聊天消息框的显示
-  + 调用地址：http://127.0.0.1:43210/showmsg
+* 勾选此选项时自动设置地址为：http://127.0.0.1:43210/，可自行修改端口
+* 此功能为对外开放服务，可用于其它场景使用
+* 显示聊天消息
+  + 调用地址：异步方法 http://127.0.0.1:43210/ShowMsg   同步方法 http://127.0.0.1:43210/ShowMsgAsync
   + 调用方式：POST
   + 调用参数：Json格式，具体参数内容请看[ExtArgs.cs](https://github.com/war3tools/war3tools.github.io/blob/master/Others/SuWar3ToolsExtDemo/SuWar3ToolsExt/ExtArgs.cs)文件
 ```
@@ -63,3 +64,17 @@
     "Msg":"[SendKeys]{Enter}\n[SetClipboard]复杂模式的消息，具体用法请参考ExtArgs说明\n[SendKeys]^v\n[SendKeys]{Enter}"
 }
 ```
+* 获取魔兽相关信息，与调用扩展程序的消息相同
+  + 调用地址：http://127.0.0.1:43210/GetWar3Args
+  + 调用方式：GET
+  + 返回结果：
+  ```
+{"code":"200","msg":"","data":{"Pid":2272,"BaseAddr":1862270976,"StormAddr":352321536,"Version":"1.24.4.6387","Joiners":[],"Players":[{"Name":"蜀国","Index":0},{"Name":"sky","Index":0},{"Name":"玩家 3","Index":0},{"Name":"玩家 4","Index":0},{"Name":"玩家 5","Index":0},{"Name":"玩家 6","Index":0},{"Name":"魏国","Index":0},{"Name":"玩家 8","Index":0},{"Name":"玩家 9","Index":0},{"Name":"玩家 10","Index":0},{"Name":"玩家 11","Index":0},{"Name":"玩家 12","Index":0}],"MapPath":"Maps\\Download\\qcloud_20018555.w3x"}}
+  ```
+* 获取当前单位的信息
+  + 调用地址：http://127.0.0.1:43210/GetUnitInfo
+  + 调用方式：GET
+  + 返回结果：
+  ```
+{"code":"200","msg":"","data":{"UnitAddr":"247441396","UnitID":"H008","UnitName":"","HP":463,"MP":339}}
+  ```
