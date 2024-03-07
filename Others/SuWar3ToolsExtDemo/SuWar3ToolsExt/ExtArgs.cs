@@ -40,6 +40,16 @@ namespace SuWar3ToolsExt
         /// 游戏所用地图路径(支持1.22~1.28)
         /// </summary>
         public string MapPath { get; set; }
+
+        /// <summary>
+        /// 游戏界面状态码(支持1.22~1.28)
+        /// </summary>
+        public int StateCode { get; set; }
+
+        /// <summary>
+        /// 游戏时间(支持1.22~1.28)，单位毫秒
+        /// </summary>
+        public long GameTime { get; set; }
     }
 
     [ObfuscationAttribute(Exclude = true, ApplyToMembers = true)]
