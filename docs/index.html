@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <title>魔兽争霸3改键SuWar3Tools</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="魔兽争霸3改键SuWar3Tools">
+  <meta name="keywords" content="魔兽争霸3改键SuWar3Tools,魔兽争霸,Warcraft III,war3,wc3,SuWar3Tools,改键,喊话,显血,显蓝">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="//cdn.staticfile.org/docsify/4.13.1/themes/vue.css">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7779916227810877" crossorigin="anonymous"></script>
+</head>
+<body>
+    <script>if (window.location.href.includes('.github.io')) window.location.href = window.location.href.replace('.github.io','.pages.dev')</script>
+    <div id="app"></div>
+    <script>
+        window.$docsify = {
+            loadNavbar: true,
+            loadSidebar: true,
+            subMaxLevel: 3,
+            auto2top: true,
+            coverpage: true,
+            onlyCover: true,
+            name: 'SuWar3Tools',
+            logo: '/favicon.ico',
+            repo: 'https://github.com/war3tools/war3tools.github.io',
+            search: 'auto',
+            copyCode: {
+                buttonText: 'Copy to clipboard',
+                errorText: 'Error',
+                successText: 'Copied',
+            },
+            // cusdis: {
+            //   host: 'https://cusdis.com',
+            //   appId: 'd1bd9faa-c148-45d1-8618-331bf51379ee',
+            // },
+            plugins: [
+                function (hook, vm) {
+                    hook.afterEach(function (html, next) {
+                        var vt = "<p><img src=\"https://visitor-badge.laobi.icu/badge?page_id=war3tools.github.io\" /></p>";
+                        if (!window.location.href.includes('x.net')) {
+                            next(vt + html);
+                        } else {
+                            var ad = "<div><ins class=\"adsbygoogle\" style=\"display:block\" data-ad-client=\"ca-pub-7779916227810877\" data-ad-slot=\"6311421235\" data-ad-format=\"auto\" data-full-width-responsive=\"false\"></ins></div>";
+                            next(ad + vt + html);
+                        }
+                    });
+                    hook.doneEach(function () {
+                        if (!(window.location.href.includes('.io/') || window.location.href.includes('.page/'))) {
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                        }
+                    });
+                }
+            ]
+        }
+    </script>
+    <!-- Docsify v4 -->
+    <script src="//cdn.staticfile.org/docsify/4.13.1/docsify.min.js"></script>
+    <script src="//cdn.staticfile.org/docsify/4.13.1/plugins/search.min.js"></script>
+    <script src="//cdn.staticfile.org/docsify/4.13.1/plugins/zoom-image.min.js"></script>
+    <script src="//cdn.staticfile.org/docsify-copy-code/3.0.0/docsify-copy-code.min.js"></script>
+    <!-- <script src="https://cusdis.com/js/cusdis.docsify.js"></script> -->
+    <!-- <script>
+      window.onhashchange = function (event) {
+          if (event.newURL.split('?')[0] !== event.oldURL.split('?')[0]) {
+              location.reload()
+          }
+      }
+    </script> -->
+</body>
+</html>
